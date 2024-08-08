@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangtan Sonyeondan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 2px;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff4081;
+        }
+
+        nav img {
+            height: 50px;
+        }
+
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+        }
+        .homepage {
+    background: url('https://0.soompi.io/wp-content/uploads/2023/06/08060429/BTS-2.jpeg') no-repeat center center/cover;
+    color: rgb(240, 246, 248);
+    text-align: center;
+    position: relative;
+}
+
+.homepage h1 {
+    font-size: 3em;
+    color: darkblue;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.homepage h1:hover {
+    color: rgb(84, 0, 55);
+    background: linear-gradient(45deg, #ff0066, #572ebd, #af24b6);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-animation 3s infinite;
+}
+
+.icon {
+    font-size: 1.5em; /* Adjust the size as needed */
+    color: purple;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: flip 1s infinite;
+}
+
+.icon.left {
+    left: -2.5em; /* Adjust the distance from the text */
+}
+
+.icon.right {
+    right: -2.5em; /* Adjust the distance from the text */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(0);
+    }
+}
+
+
+        
+
+        .about {
+            background: url('https://assets.bandwagon.asia/system/tinymce/image/file/4342/content_BIGHIT_MUSIC_BTS_PERMISSION_TO_DANCE_ON_STAGE_-_LA_2021_pr__1_.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .about p {
+            display: flex;
+            padding: 50px;
+            width: 80%; /* Adjust this width as needed */
+            margin: 0 auto;
+            border-right: 2px solid black;
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: justify;
+            background: linear-gradient(45deg, #ff00667a, #401c9a84, #fd177779);
+            border-radius: 20px;
+        }
+
+        .members {
+            background: url('https://marketplace.canva.com/EAFO2PmJF-A/1/0/1600w/canva-brown-cute-organic-minimalist-zoom-virtual-background-zl1VO0_k3_w.jpg') no-repeat center center/cover;
+            color: rgb(34, 108, 212);
+        }
+
+        .members table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .members th, .members td {
+            padding: 20px;
+            text-align: left;
+        }
+        .members dl {
+    margin: 0;
+    padding: 0;
+}
+
+.members dt {
+    font-weight: bold;
+    color: purple; /* Highlight color */
+    margin: 0;
+}
+
+.members dd {
+    margin: 0 0 10px 0; /* Adjust spacing as needed */
+    color: #333;
+}
+
+
+        .members img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-left: 70%;
+            transition: transform 0.3s;
+        }
+
+        .members img:hover {
+            transform: scale(1.1);
+        }
+
+        .songs {
+            background: url('https://static.vecteezy.com/system/resources/previews/000/693/323/original/abstract-gradient-pink-purple-stripes-on-purple-background-vector.jpg') no-repeat center center/cover;
+            color: white;
+        }
+
+        .songs .cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 150px;
+    padding: 0;
+    justify-content: center;
+}
+
+.songs .card {
+    background: white;
+    color: black;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.songs .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+
+        .ticket {
+            background: linear-gradient(135deg, #0414a2 0%, hsl(329, 99%, 60%) 59%, #12ebcba4 100%);
+            color: rgb(255, 255, 255);
+            text-align: center; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+.ticket h2 {
+    margin-bottom: 20px;
+}
+
+.ticket p {
+    margin: 10px 0;
+}
+
+.ticket form {
+    background: rgba(12, 12, 11, 0.292);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 30%;
+    padding: 50px;
+    border-radius: 8px;
+}
+
+.ticket form label {
+ 
+    margin: 10px 0 5px;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
+
+.ticket form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.ticket form button {
+    padding: 10px 20px;
+    background-color: #15ef0af3;
+    color: rgb(20, 20, 20);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ticket form button:hover {
+    background-color: #590a92;
+    color: rgb(246, 244, 244);
+    font-size: large;
+}
+
+        .comments {
+            background: linear-gradient(135deg, #020b36 0%, #340267 100%);
+            color: white;
+            text-align: center;
+            font-size: larger;
+        }
+
+        .comments textarea {
+            width: 80%;
+            height: 400px;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        .comments button  {
+            background-color: #590a92;
+            color: rgb(246, 244, 244);
+            font-size: large;
+            padding: 10px;
+            border-radius: 5%;
+        }
+
+        .social-media {
+            background: url('https://wallpaperaccess.com/full/6079298.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .social-media .social-container span {
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .social-media .social-container i {
+            font-size: 2em;
+        }
+
+        .social-media .social-container a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-media .social-container a:hover {
+            color: #ff4081;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#homepage"><img src="https://images-cdn.ubuy.co.in/634fe5b3bf3d4b771a7c70f5-k-pop-new-bts-logo-edged-out-white.jpg" alt="BTS Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="#homepage">Home</a>
+            <a href="#about">About</a>
+            <a href="#members">Members</a>
+            <a href="#songs">Songs</a>
+            <a href="#ticket">Ticket</a>
+            <a href="#comments">Comments</a>
+            <a href="#social-media">Social Media</a>
+        </div>
+    </nav>
+
+    <section id="homepage" class="homepage">
+        <h1>
+            <span class="icon left">&#10084;</span>
+            Welcome to Bangtan Sonyeondan
+            <span class="icon right">&#10084;</span>
+        </h1>
+    </section>
+    
+    <section id="about" class="about">
+        <p>BTS, an acronym of Bangtan Sonyeondan or “Beyond the Scene,” is a Grammy-nominated South Korean group <br>
+            that has been capturing the hearts of millions of fans globally since its debut in June 2013. <br>
+             The members of BTS are RM, Jin, SUGA, j-hope, Jimin, V, and Jung Kook. <br>
+             Gaining recognition for their authentic and self-produced music, <br>
+             top-notch performances, and the way they interact with their fans, <br>
+             BTS has established themselves as “21st century Pop Icons” breaking countless world records. <br> 
+             While imparting a positive influence through activities such as the LOVE MYSELF campaign and <br>
+             the UN ‘Speak Yourself’ speech,
+             the band has mobilized millions of fans across the world (named ARMY), <br> 
+             collected four No. 1 songs in a span of 9 months, 
+             performed multiple sold-out stadium shows across the world, <br> 
+             and been named TIME’s Entertainer of the Year 2020. <br>
+             BTS has been nominated for Best Pop Duo/Group Performance for the 63rd Grammy Awards and <br> 
+             recognized with numerous prestigious awards like the 
+             Billboard Music Awards, American Music Awards and MTV Video Music Awards.</p>
+    </section>
+
+    <section id="members" class="members">
+        <table>
+            <tr>
+                <td><img src="https://qph.cf2.quoracdn.net/main-qimg-9a5ccd5cb40d5b4881d4ac1711dd0b23-lq" alt="RM"></td>
+                <td>
+                    <dl>
+                        <dt class="highlight">Name:</dt><dd>Kim Namjoon</dd>
+                        <dt class="highlight">Stage name:</dt><dd>RM</dd>
+                        <dt class="highlight">Birthday:</dt><dd>12 September 1994</dd>
+                    </dl>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="https://i.mydramalist.com/RBAb4z_5c.jpg" alt="Jin"></td>
+                <td>
+                    <dl>
+                        <dt class="highlight">Name:</dt><dd>Kim Seokjin</dd>
+                        <dt class="highlight">Stage name:</dt><dd>Jin</dd>
+                        <dt class="highlight">Birthday:</dt><dd>4 December 1992</dd>
+                    </dl>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="https://qph.cf2.quoracdn.net/main-qimg-2d88021191d85a16f0635277cbf58ff8" alt="SUGA"></td>
+                <td>
+                    <dl>
+                        <dt class="highlight">Name:</dt><dd>Min Yoongi</dd>
+                        <dt class="highlight">Stage name:</dt><dd>SUGA</dd>
+                        <dt class="highlight">Birthday:</dt><dd>9 March 1993</dd>
+                    </dl>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="https://www.bu.edu/lernet/artemis/years/2022/projects/StudentWebsites/Group7/jhope%205.jpg" alt="j-hope"></td>
+                <td>
+                    <dl>
+                        <dt class="highlight">Name:</dt><dd>Jung Hoseok</dd>
+                        <dt class="highlight">Stage name:</dt><dd>j-hope</dd>
+                        <dt class="highlight">Birthday:</dt><dd>18 February 1994</dd>
+                    </dl>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXX0sREg5zl5yKkoAyHdidTgArppsQqs0RLw&s" alt="Jimin"></td>
+                <td>
+                    <dl>
+                        <dt class="highlight">Name:</dt><dd>Park Jimin</dd>
+                        <dt class="highlight">Stage name:</dt><dd>Jimin</dd>
+                        <dt class="highlight">Birthday:</dt><dd>13 October 1995</dd>
+                    </dl>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="https://m.media-amazon.com/images/I/41lK2tHBXPL._AC_UF1000,1000_QL80_.jpg" alt="V"></td>
+                <td>
+                    <dl>
+                        <dt class="highlight">Name:</dt><dd>Kim Taehyung</dd>
+                        <dt class="highlight">Stage name:</dt><dd>V</dd>
+                        <dt class="highlight">Birthday:</dt><dd>30 December 1995</dd>
+                    </dl>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="https://tse1.mm.bing.net/th?id=OIP.tUow5KADnV_73w6FTPcy-wAAAA&pid=Api&P=0&h=220" alt="Jungkook"></td>
+                <td>
+                    <dl>
+                        <dt class="highlight">Name:</dt><dd>Jeon Jungkook</dd>
+                        <dt class="highlight">Stage name:</dt><dd>Jungkook</dd>
+                        <dt class="highlight">Birthday:</dt><dd>1 September 1997</dd>
+                    </dl>
+                </td>
+            </tr>
+        </table>
+    </section>
+    
+        <section id="songs" class="songs">
+            <div class="cards">
+                <div class="card">
+                    <a href="https://youtu.be/WMweEpGlu_U?si=Vyl8_9EcXmJ9S6RU" target="_blank">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.wvYquc5v0lgRaz8j0IQexwHaHa&pid=Api&P=0&h=220" alt="Butter">
+                        <p>Butter</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://youtu.be/MBdVXkSdhwU?si=R2g6DHiu5AwVHc6g" target="_blank">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.oeW6TfObz3bb6i_MFoDjDwHaNL&pid=Api&P=0&h=220" alt="DNA">
+                        <p>DNA</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://youtu.be/7C2z4GqqS5E?si=M_m8yg4iQrzg7Bs-" target="_blank">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.A5ND9z0_r0rnbXbjYCYUUwHaHa&pid=Api&P=0&h=220" alt="Fake Love">
+                        <p>Fake Love</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://youtu.be/DTcKkcyS410?si=0p1ZwtlQisHXU2Ke" target="_blank">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.UgUB1OtdIyTFv9FIRCk9IgHaHa&pid=Api&P=0&h=220" alt="Just One Day">
+                        <p>Just One Day</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://youtu.be/gdZLi9oWNZg?si=plf_ZgSVk4kge7fR" target="_blank">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.ojpAkHq6VsclPrqsb4GaBQHaJG&pid=Api&P=0&h=220" alt="Dynamite">
+                        <p>Dynamite</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://youtu.be/kTlv5_Bs8aw?si=hyou6qSQTK7ChgvN" target="_blank">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.SRCS-GKgsuNsb1XhC9ctzgHaEK&pid=Api&P=0&h=220" alt="mic drop">
+                        <p>Mic Drop </p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://youtu.be/XsX3ATc3FbA?si=OCpXgfus8Y8GHrmq" target="_blank">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.TqTgHUeFXZ1PQk8w7Xo0jQHaEK&pid=Api&P=0&h=220" alt="Bot with luv">
+                        <p>Boy With Luv </p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://youtu.be/GZjt_sA2eso?si=uSHJswchWFCULAFo" target="_blank">
+                        <img src="http://thegeekiary.com/wp-content/uploads/2019/01/Save-Me.jpg" alt="Save-Me">
+                        <p>Save Me</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://youtu.be/pBuZEGYXA6E?si=qPVffSmZwtHoMa8h" target="_blank">
+                        <img src="https://c.saavncdn.com/789/Idol-Japanese-2018-20180829143314-500x500.jpg" alt="idol">
+                        <p>IDOL</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://youtu.be/0lapF4DQPKQ?si=wSjU8RRttuyfNYrE" target="_blank">
+                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/166e992b-4534-4bd8-bb41-3be395f82cde/deiomw9-aac22612-b70d-4594-b102-9216c8cf98bd.png/v1/fill/w_1280,h_1280,q_80,strp/bts___black_swan_by_goldendesigncover_deiomw9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzE2NmU5OTJiLTQ1MzQtNGJkOC1iYjQxLTNiZTM5NWY4MmNkZVwvZGVpb213OS1hYWMyMjYxMi1iNzBkLTQ1OTQtYjEwMi05MjE2YzhjZjk4YmQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.lRBlv-N-IAsNWpYoB7J0gd3myyDVlfhfAbA16C5l_yo" alt="blackswan">
+                        <p>Black Swan</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    
+        <section id="ticket" class="ticket">
+            <h2>Get Your Tickets Now!</h2>
+            <p><strong>Cost:</strong> $150</p>
+            <p><strong>Location:</strong> Seoul Olympic Stadium</p>
+            <p><strong>Hours:</strong> 6:00 PM - 10:00 PM</p>
+            <p><strong>Guidelines:</strong> Please follow the venue's safety protocols and arrive early to secure your spot.</p>
+            
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="quantity">Number of Tickets:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+    
+        <section id="comments" class="comments">
+            <h2>Comments</h2>
+            <div class="comment-box">
+                <textarea placeholder="Leave your comments here..."></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </section>
+    
+        <section id="social-media" class="social-media">
+            <h2>Follow BTS on Social Media</h2>
+            <div class="social-container">
+                <span>
+                    <a href="https://www.instagram.com/bts.bighitofficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </span>
+                <span>
+                    <a href="https://www.youtube.com/@HYBELABELS" target="_blank"><i class="fab fa-youtube"></i></a>
+                </span>
+                <span>
+                    <a href="https://x.com/BTS_bighit" target="_blank"><i class="fab fa-twitter"></i></a>
+                </span>
+            </div>
+        </section>
+    </body>
+    </html>
